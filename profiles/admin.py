@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Profile, Post
+from .models import Profile, Post, LikePost
 
 
 @admin.register(Profile)
@@ -10,3 +10,7 @@ class ProfileAdmin(admin.ModelAdmin):
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
   list_display = ['user']
+
+@admin.register(LikePost)
+class LikePostAdmin(admin.ModelAdmin):
+  list_display = ['username']
