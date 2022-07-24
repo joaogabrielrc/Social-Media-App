@@ -8,7 +8,8 @@ from .views import (
   like_post_view,
   upload_view,
   profile_view,
-  follow_view
+  follow_view,
+  search_view
 )
 
 
@@ -20,5 +21,6 @@ urlpatterns = [
   path('like-post/', like_post_view, name='like-post'),
   path('upload/', upload_view, name='upload'),
   path('profile/<str:pk>', profile_view, name='profile'),
-  path('follow/', follow_view, name='follow')
+  path('follow/', follow_view, name='follow'),
+  path('search/', search_view, name='search')
 ]
